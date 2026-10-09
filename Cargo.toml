@@ -1,0 +1,26 @@
+[workspace]
+resolver = "3"
+members = [
+    "apps/leptos-ui",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+publish = false
+# license = a definir (ver docs/project/vision.md#decisoes-pendentes)
+
+[workspace.dependencies]
+# Crates internos
+# Nome provisório: "leptos-ui" já existe no crates.io — ver docs/project/vision.md
+leptos-ui = { path = "apps/leptos-ui" }
+
+# Leptos — a lib não fixa csr/hydrate/ssr; quem decide é o app (ADR-0007)
+leptos      = "0.8"
+leptos_meta = "0.8"
+
+# [profile.*] só aqui: num membro do workspace é ignorado
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1

@@ -1,0 +1,16 @@
+{
+  "name": "@ws-leptos-next/docs",
+  "version": "0.0.1",
+  "description": "ws-leptos-next — documentação técnica (VitePress)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-llms": "^1.14.0"
+  }
+}

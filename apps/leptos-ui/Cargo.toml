@@ -1,0 +1,15 @@
+[package]
+name = "leptos-ui"
+description = "Biblioteca de componentes Leptos com temas por tokens (≈ Quasar para o Leptos)"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[features]
+# Repassam o modo de renderização do app para o leptos (ADR-0007).
+csr     = ["leptos/csr"]
+hydrate = ["leptos/hydrate"]
+ssr     = ["leptos/ssr"]
+
+[dependencies]
+leptos = { workspace = true }

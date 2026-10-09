@@ -1,0 +1,9 @@
+node_modules/
+target/
+dist/
+.moon/cache/
+.env
+.env.*
+!.env.example
+docs/.vitepress/cache/
+docs/.vitepress/dist/

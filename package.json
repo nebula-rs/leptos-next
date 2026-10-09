@@ -1,0 +1,16 @@
+{
+  "name": "ws-leptos-next",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Monorepo — ws-leptos-next (Rust, orquestrado pelo Moon)",
+  "scripts": {
+    "check": "moon run :check :lint :fmt :test",
+    "build": "moon run :build",
+    "docs:dev": "moon run docs:dev",
+    "docs:build": "moon run docs:build"
+  },
+  "packageManager": "pnpm@12.4.1",
+  "engines": {
+    "node": ">=24"
+  }
+}

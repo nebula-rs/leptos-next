@@ -1,0 +1,21 @@
+$schema: 'https://moonrepo.dev/schemas/project.json'
+
+language: 'typescript'
+layer: 'tool'
+
+tasks:
+  dev:
+    command: 'pnpm run dev'
+    preset: 'server'
+
+  build:
+    command: 'pnpm run build'
+    inputs:
+      - '**/*.md'
+      - '.vitepress/config.ts'
+    outputs:
+      - '.vitepress/dist'
+
+  preview:
+    command: 'pnpm run preview'
+    preset: 'server'
