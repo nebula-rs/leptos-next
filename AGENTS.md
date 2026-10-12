@@ -27,6 +27,7 @@ Instruções para agentes de IA neste repositório.
 
 - Consulte a página relevante acima antes de alterar código ou estrutura.
 - Implementando um plano de `.plan/`? Siga-o e registre desvios nele.
+- `apps/*` são **submódulos git** (um repositório por app): commit primeiro no submódulo, depois o ponteiro na raiz — [fluxo](docs/guide/monorepo.md#repositorios-e-submodulos).
 - Se a mudança altera arquitetura, comandos ou convenções, atualize `docs/` no mesmo trabalho; decisão nova → novo ADR.
 - Se algo não está documentado, pergunte ou proponha a documentação — não invente convenções.
 - pnpm, nunca npm. Dependência de sistema faltando → peça ao usuário o `sudo apt-get install …` exato.

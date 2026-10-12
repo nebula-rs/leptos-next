@@ -1,5 +1,7 @@
 packages:
   - 'docs'
+  - 'apps/leptos-nebula'
+  - 'apps/leptos-press'
 
 allowBuilds:
   esbuild: true

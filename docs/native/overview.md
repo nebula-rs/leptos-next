@@ -1,4 +1,4 @@
-# `<nome>-native` — visão geral
+# `leptos-native` — visão geral
 
 Runtime nativo montado sobre o **tooling** que o Tauri desenvolveu, **sem o framework Tauri**. Toda ponte entre frontend e nativo é **Rust dos dois lados**: nada de IPC JS, nada de `window.__TAURI__`, nada de bindings traduzidos para JavaScript.
 
@@ -23,7 +23,7 @@ Nada aqui foi validado. O trabalho começa por um **spike**; a API só é desenh
 4. O lado nativo implementa as capacidades (arquivos, notificações…) em Rust.
 5. O mesmo protocolo serve os assets do frontend, embutidos no binário.
 
-**Estrutura provável:** as `#[server] fn` num crate compartilhado, compilado com feature de cliente no frontend (wasm) e feature nativa no binário — no modelo `hydrate`/`ssr` do Leptos. O `<nome>-native` fornece o handler, o registro das funções e o bootstrap (janela + WebView + protocolo).
+**Estrutura provável:** as `#[server] fn` num crate compartilhado, compilado com feature de cliente no frontend (wasm) e feature nativa no binário — no modelo `hydrate`/`ssr` do Leptos. O `leptos-native` fornece o handler, o registro das funções e o bootstrap (janela + WebView + protocolo).
 
 ## Spike — perguntas a responder
 

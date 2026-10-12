@@ -19,7 +19,7 @@ Clone raso de `quasarframework/quasar` (branch `dev`). É a referência de **API
 
 Mapeamento de API Vue → Leptos:
 
-| Quasar | Leptos (`<nome>-ui`) |
+| Quasar | Leptos (`leptos-nebula`) |
 |---|---|
 | prop `kebab-case` | prop `snake_case` |
 | `v-model` | `RwSignal<T>` (prop `value`/`model`) |

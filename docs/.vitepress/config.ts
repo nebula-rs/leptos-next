@@ -84,6 +84,8 @@ export default defineConfig({
             { text: '0005 — Entrega do CSS', link: '/decisions/0005-entrega-do-css' },
             { text: '0006 — leptos-press', link: '/decisions/0006-leptos-press' },
             { text: '0007 — Press: CSR e SSG', link: '/decisions/0007-press-csr-e-ssg' },
+            { text: '0008 — Nome leptos-nebula', link: '/decisions/0008-nome-leptos-nebula' },
+            { text: '0009 — Repositórios e submódulos', link: '/decisions/0009-repositorios-e-submodulos' },
           ],
         },
       ],

@@ -4,7 +4,7 @@
   "private": true,
   "description": "Monorepo — ws-leptos-next (Rust, orquestrado pelo Moon)",
   "scripts": {
-    "check": "moon run :check :lint :fmt :test",
+    "check": "moon run :check :lint :fmt :test leptos-nebula:css-check leptos-nebula:css-fresh leptos-press:css-check leptos-press:css-fresh",
     "build": "moon run :build",
     "docs:dev": "moon run docs:dev",
     "docs:build": "moon run docs:build"

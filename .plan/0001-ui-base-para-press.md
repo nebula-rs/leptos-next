@@ -1,9 +1,12 @@
 # Plano 0001 — Base do `<nome>-ui` (o necessário para o `leptos-press`)
 
-- **Status:** Planejado (não iniciado)
+- **Status:** Concluído (2026-10-09) — critério de aceite 5 verificado em screenshots headless (claro, 1280px e 375px); troca de modo/persistência e `Auto` com OS escuro ficam para teste manual
+- **Respostas aos bloqueios:** nome provisório mantido (`leptos-ui`), prefixo `lx`, licença `MIT OR Apache-2.0`
 - **Data do plano:** 2026-10-09
 - **Escopo:** workspace Cargo; crate `<nome>-ui` em `apps/leptos-ui`; pipeline de CSS (ADR-0005); tokens do tema scandi (claro/escuro) — com a arquitetura de tokens já preparada para os outros dois temas iniciais (Material Design 3 e Liquid Glass, implementados depois) — e store de tema; versões **parciais** dos componentes de que o `leptos-press` precisa; um playground temporário para ver tudo funcionando.
-- **Depois:** plano 0002 (`leptos-press` v0 + `apps/docs`), plano 0003 (`Form`).
+- **Depois:** plano 0002 (`leptos-press` v0 + `apps/docs`), plano 0003 (polimento de layout), plano 0004 (`Form`).
+
+> **Nota (2026-10-12):** os crates foram renomeados depois deste plano — `leptos-ui` → `leptos-nebula` (pasta `apps/leptos-nebula`) ([ADR-0008](../docs/decisions/0008-nome-leptos-nebula.md)). Os nomes e caminhos abaixo são históricos.
 
 > Este plano é autocontido: a sessão de implementação não viu a conversa de planejamento.
 > Leia antes de começar:
@@ -186,3 +189,18 @@ Todos os componentes acima compilam para wasm32 **e** com `leptos/ssr` (`check-s
   - `docs/guide/monorepo.md` (projetos e tarefas), `docs/guide/conventions.md` (prefixo, `dist/ui.css` como gerado), `docs/guide/pitfalls.md` (o que aparecer);
   - `docs/project/plans.md` — status.
 - Marcar este plano como **Concluído** no topo, listando desvios.
+
+---
+
+## Desvios (registrados na implementação)
+
+- **`Item` com `href` renderiza `<a>` simples**, não `leptos_router::A`: o `Router` do app já intercepta cliques em `<a>` e a lib fica sem depender de `leptos_router` (e sem pânico fora de um `Router`).
+- **Primitivos também prefixados** (`--lx-p-*`), não só semânticos e de componente — evita colisão com o CSS do app.
+- **Shortcuts em `uno/shortcuts.ts`** (exportados por `uno/preset.ts`); `uno.config.ts` fica mínimo. A checagem usa `shortcuts` direto.
+- **`@unocss/cli` só no playground**: o `ui.css` é gerado por `scripts/build-css.mjs` (API `createGenerator`), que também repete o bloco escuro em `@media (prefers-color-scheme: dark)` a partir dos marcadores `dark:start/dark:end` do `scandi.css`.
+- **`Drawer` ganhou `show_if_above`** (≈ Quasar `show-if-above`) para abrir/fechar ao cruzar o breakpoint; o SSR assume tela larga.
+- **Cores de superfície** seguem o contrato multi-tema (`on-surface`, `surface-raised`, `--lx-state-*-filter`, `--lx-surface-backdrop/highlight` neutros) em vez dos nomes do omg-data-sync (`text`, `muted`…).
+- **Estado `hover`/pressionado** é um `filter` por token (`--lx-state-hover-filter`), no lugar de cores `*-hover` por papel.
+- **`type` do `Btn` é `type_`** (palavra reservada).
+- Medidas: `ui.css` 29 KB (5,9 KB gzip); wasm do playground em `--release` 273 KB (109 KB gzip).
+- `.gitignore`: exceção para `apps/leptos-ui/style/dist/` (o `dist/` global ignorava o `ui.css`).

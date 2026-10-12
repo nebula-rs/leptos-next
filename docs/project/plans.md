@@ -13,6 +13,7 @@ Trabalho grande é planejado numa sessão e implementado em outra. Os planos fic
 
 | Plano | Etapa | Status |
 |---|---|---|
-| `.plan/0001-ui-base-para-press.md` | Workspace Cargo, crate `<nome>-ui`, pipeline de CSS, tokens scandi, store de tema, componentes **parciais** que o press usa, playground temporário | Planejado |
-| `.plan/0002-…` | `leptos-press` v0 (CSR + SSG) + `apps/docs`; remove o playground | A escrever (depois do 0001) |
-| `.plan/0003-form.md` | `Form` + `use_form_child` com testes | Planejado |
+| `.plan/0001-ui-base-para-press.md` | Workspace Cargo, crate `leptos-nebula`, pipeline de CSS, tokens scandi, store de tema, componentes **parciais** que o press usa, playground temporário | Concluído (2026-10-09) |
+| `.plan/0002-leptos-press-v0.md` | Spike do SSG; `leptos-press` (runtime + `leptos-press-build`), CSR + SSG, `llms.txt`; `apps/docs` com `DocExample`/`DocApi` e as primeiras páginas; remove o playground | Concluído (2026-10-09) |
+| `.plan/0003-polimento-layout.md` | Polimento do layout do `leptos-press` e do `List`/`Item` do ui (alinhamentos, container conteúdo + outline, nav, exemplo e bloco de código) | Concluído (2026-10-09) |
+| `.plan/0004-form.md` | `Form` + `use_form_child` com testes | Planejado |

@@ -1,23 +1,47 @@
 [workspace]
 resolver = "3"
 members = [
-    "apps/leptos-ui",
+    "apps/leptos-nebula",
+    "apps/leptos-press",
+    "apps/leptos-press/build",
+    "apps/docs",
 ]
 
 [workspace.package]
 version = "0.1.0"
 edition = "2024"
+license = "MIT OR Apache-2.0"
 publish = false
-# license = a definir (ver docs/project/vision.md#decisoes-pendentes)
 
 [workspace.dependencies]
 # Crates internos
-# Nome provisório: "leptos-ui" já existe no crates.io — ver docs/project/vision.md
-leptos-ui = { path = "apps/leptos-ui" }
+# Nomes: ADR-0008
+leptos-nebula = { path = "apps/leptos-nebula" }
+leptos-press = { path = "apps/leptos-press" }
+leptos-press-build = { path = "apps/leptos-press/build" }
 
 # Leptos — a lib não fixa csr/hydrate/ssr; quem decide é o app (ADR-0007)
 leptos      = "0.8"
 leptos_meta = "0.8"
+leptos_router = "0.8"
+web-sys = "0.3"
+wasm-bindgen = "0.2"
+js-sys = "0.3"
+console_error_panic_hook = "0.1"
+leptos_axum = "0.8"
+axum = "0.8"
+tokio = "1"
+
+# Lado de build do leptos-press (host only; nunca entra no wasm)
+comrak = { version = "0.56", default-features = false }
+syntect = { version = "5", default-features = false, features = ["html", "parsing", "default-syntaxes", "default-themes", "regex-fancy"] }
+quote = "1"
+proc-macro2 = "1"
+prettyplease = "0.3"
+syn = { version = "3", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_yaml_ng = "0.10"
 
 # [profile.*] só aqui: num membro do workspace é ignorado
 [profile.release]

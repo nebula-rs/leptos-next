@@ -11,8 +11,9 @@
 | Rust | stable (edition 2024) | Via [rustup](https://rustup.rs) |
 | Target `wasm32-unknown-unknown` | — | `rustup target add wasm32-unknown-unknown` |
 | Trunk | 0.21 | Bundler dos apps Leptos CSR |
+| cargo-leptos | 0.3 | Compila o par `ssr` + `hydrate` do SSG do `apps/docs` (`cargo install cargo-leptos --locked`) |
 | Targets Rust Android | — | Já instalados no ambiente de desenvolvimento |
-| JDK, Android SDK, NDK | NDK 29.0.14206865 | Só para o `<nome>-native` no Android (ver abaixo) |
+| JDK, Android SDK, NDK | NDK 29.0.14206865 | Só para o `leptos-native` no Android (ver abaixo) |
 
 ## Ambiente
 
@@ -20,6 +21,12 @@
 - **Dependência de sistema faltando:** peça ao usuário o comando `sudo apt-get install …` exato. Não improvise instalações, não use alternativas que contornem o pacote.
 
 ## Setup
+
+Clone com os submódulos (cada app é um repositório — [ADR-0009](../decisions/0009-repositorios-e-submodulos.md)):
+
+```bash
+git clone --recurse-submodules git@github.com:nebula-rs/leptos-next.git
+```
 
 ```bash
 pnpm install        # dependências JS (docs; depois UnoCSS)
@@ -30,7 +37,15 @@ moon projects       # lista os projetos registrados
 O hasher usa `walkStrategy: 'vcs'`: o Moon precisa de um `HEAD` válido no git para rodar tarefas.
 :::
 
-## Documentação
+## Documentação pública (`apps/docs`)
+
+```bash
+moon run docs-app:dev       # CSR, http://localhost:8080
+moon run docs-app:build     # SSG em apps/docs/dist/site
+moon run docs-app:preview   # serve o SSG em http://localhost:8081
+```
+
+## Documentação interna
 
 ```bash
 moon run docs:dev       # VitePress em http://localhost:5173

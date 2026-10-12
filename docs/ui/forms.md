@@ -30,7 +30,7 @@ Referências no Quasar: `ui/src/components/form/QForm.{js,json,test.js}`, `ui/sr
 
 ### API proposta
 
-| Quasar | `<nome>-ui` |
+| Quasar | `leptos-nebula` |
 |---|---|
 | props `autofocus`, `no-error-focus`, `no-reset-focus`, `greedy` | `autofocus`, `no_error_focus`, `no_reset_focus`, `greedy` (`bool`) |
 | `@submit`, `@reset` | `on_submit: Callback<SubmitEvent>`, `on_reset: Callback<()>` |

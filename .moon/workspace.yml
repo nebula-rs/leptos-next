@@ -3,7 +3,9 @@ $schema: 'https://moonrepo.dev/schemas/workspace.json'
 # Projetos do monorepo — ver docs/guide/monorepo.md
 projects:
   docs: 'docs'
-  leptos-ui: 'apps/leptos-ui'
+  leptos-nebula: 'apps/leptos-nebula'
+  leptos-press: 'apps/leptos-press'
+  docs-app: 'apps/docs'
 
 vcs:
   client: 'git'

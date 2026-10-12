@@ -1,0 +1,12 @@
+[submodule "apps/docs"]
+	path = apps/docs
+	url = ../nebula-docs.git
+[submodule "apps/leptos-nebula"]
+	path = apps/leptos-nebula
+	url = ../leptos-nebula.git
+[submodule "apps/leptos-press"]
+	path = apps/leptos-press
+	url = ../leptos-press.git
+[submodule "apps/leptos-native"]
+	path = apps/leptos-native
+	url = ../leptos-native.git
