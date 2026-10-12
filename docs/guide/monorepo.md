@@ -7,7 +7,7 @@ O repositório é orquestrado pelo [Moon](https://moonrepo.dev) — ver [ADR-000
 Atual:
 
 ```
-ws-leptos-next/
+leptos-next/                 # repositório nebula-rs/leptos-next (pasta local: ws-leptos-next)
 ├── .moon/workspace.yml      # registro de projetos, VCS, hasher
 ├── .prototools              # versões fixadas: moon, node, pnpm
 ├── .plan/                   # planos de implementação (um arquivo por etapa)
@@ -56,7 +56,7 @@ São projetos distintos — não confunda:
 | Conteúdo | Arquitetura, decisões, convenções, armadilhas, planos | Guia de uso, uma página por componente, exemplos vivos, API (no molde da docs do Quasar) |
 | Quem atualiza | Os próprios agentes, a cada mudança | Junto com cada componente/feature pública |
 | Tecnologia | VitePress | [`leptos-press`](../press/overview.md) (Leptos + comrak, visual do `leptos-nebula`) |
-| Id no Moon | `docs` | `docs-app` (planejado) |
+| Id no Moon | `docs` | `docs-app` |
 
 Grafo de dependências: `apps/docs` → `leptos-press` → `leptos-nebula`.
 

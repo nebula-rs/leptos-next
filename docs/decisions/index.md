@@ -16,9 +16,10 @@ Cada decisão relevante é registrada como um ADR curto e imutável. Para mudar 
 
 ## Em aberto
 
-- Nome definitivo do projeto e dos crates ([Visão e escopo](../project/vision.md#decisoes-pendentes))
 - Label flutuante × fixo no `Field`; designs na v0
-- `leptos-press`: busca, pipeline do SSG, crate única × par runtime/build ([leptos-press](../press/overview.md))
+- `leptos-press`: busca ([leptos-press](../press/overview.md))
+- Dependências por caminho → por versão antes da primeira publicação real ([ADR-0009](./0009-repositorios-e-submodulos.md)); publicar versões utilizáveis dos nomes reservados ([ADR-0008](./0008-nome-leptos-nebula.md))
+- Licença do conteúdo do `nebula-docs` (os crates são `MIT OR Apache-2.0`)
 - Respostas do spike do `leptos-native` ([Native](../native/overview.md))
 
 ## Modelo

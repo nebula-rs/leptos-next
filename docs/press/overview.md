@@ -14,7 +14,7 @@ Implementado ([plano 0002](../project/plans.md)): `leptos-press-build`, runtime 
 | Componentes Vue dentro do Markdown | Tags registradas (`<DocExample file="Basic" />`) viram componentes Leptos **compilados** |
 | `::: warning` / `> [!NOTE]` | `block_directive` e `alerts` do comrak → componente de alerta do ui |
 | Realce de código (Shiki) | syntect no build → spans com classes; cores pelos tokens `--code-*` |
-| `config.ts` (nav, sidebar) | Builder Rust no `build.rs` do site *(ou `press.toml` — a decidir)* |
+| `config.ts` (nav, sidebar) | Builder Rust (`Site`) no `build.rs` do site — sem `press.toml` |
 | Tema padrão (layout, sidebar, outline, prev/next) | Layout feito com componentes do `leptos-nebula` |
 | `vitepress-plugin-llms` | `llms.txt`, `llms-full.txt` e uma cópia `.md` por página, gerados no build |
 | Busca local | Depois *(a decidir: índice no build + consulta em wasm × Pagefind)* |

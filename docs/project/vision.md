@@ -30,9 +30,9 @@ CLI unificada com modos (`dev -m android`), PWA, updater, iOS.
 
 | Decisão | Situação |
 |---|---|
-| Nome do projeto e dos crates | **Decidido** (2026-10-12): `leptos-nebula` (ui), `leptos-native` (runtime), `leptos-press` — [ADR-0008](../decisions/0008-nome-leptos-nebula.md). Ainda `publish = false` até a primeira versão pública |
+| Nome do projeto e dos crates | **Decidido** (2026-10-12): `leptos-nebula` (ui), `leptos-native` (runtime), `leptos-press` — [ADR-0008](../decisions/0008-nome-leptos-nebula.md). Nomes reservados no crates.io com `0.0.0-wip` (2026-10-12); nos `Cargo.toml` reais, `publish = false` até a primeira versão utilizável |
 | Licença | **Decidida:** `MIT OR Apache-2.0` (`LICENSE-MIT`, `LICENSE-APACHE` na raiz) |
-| Idioma da API | Proposta: identificadores em inglês, comentários e docs em pt-BR (adotada nas [convenções](../guide/conventions.md)) |
+| Idioma da API | **Decidido:** identificadores e API em inglês; comentários e docs em pt-BR ([convenções](../guide/conventions.md)) |
 | Entrega do CSS a quem usa o crate | **Decidida:** CSS pré-gerado + preset — [ADR-0005](../decisions/0005-entrega-do-css.md) |
 | Label do campo: flutuante (Quasar) × fixo acima (scandi) | Pendente — ver [Formulários](../ui/forms.md) |
 | Tecnologia do `apps/docs` | **Decidida:** `leptos-press` + comrak — [ADR-0006](../decisions/0006-leptos-press.md) |

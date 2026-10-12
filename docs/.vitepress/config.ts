@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import llmstxt from 'vitepress-plugin-llms'
 
 export default defineConfig({
-  title: 'ws-leptos-next',
+  title: 'leptos-next',
   description: 'Documentação técnica: biblioteca de componentes e runtime nativo para Leptos.',
   lang: 'pt-BR',
   cleanUrls: true,
