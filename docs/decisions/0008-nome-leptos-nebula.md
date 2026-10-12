@@ -31,4 +31,6 @@ Os crates nasceram com nomes provisórios (`leptos-ui`, `leptos-native`). O `lep
 ## Consequências
 
 - Planos 0001–0003 citam os nomes antigos como registro histórico (nota no topo de cada um).
-- Os crates continuam `publish = false` até a primeira versão pública.
+- **Nomes reservados no crates.io em 2026-10-12** com versões de reserva `0.0.0-wip` (sem código, README apontando para o repositório): `leptos-nebula`, `leptos-native`, `leptos-press`, `leptos-press-build`. Os pacotes de reserva não estão no repositório (são só `Cargo.toml` + `lib.rs` vazio + README).
+- A [política do crates.io](https://crates.io/policies) proíbe reservar nomes por período prolongado sem funcionalidade ou desenvolvimento ativo no repositório: **publicar uma versão utilizável de cada crate o quanto antes** e manter os repositórios ativos. O `leptos-native` é o mais exposto (repositório só com o commit inicial).
+- Nos `Cargo.toml` reais os crates continuam `publish = false` até a primeira versão utilizável (que exigirá trocar as dependências por caminho — ADR-0009).
